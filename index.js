@@ -1,4 +1,7 @@
+"use strict";
 // Code how many ping pong balls it would take to fill a cube shaped room of x,y,z dimensions.
+exports.__esModule = true;
+exports.HowManyPingPongBallsFitInRectangularCube = exports.CubedRoom = exports.PingPongBall = void 0;
 var PingPongBall = /** @class */ (function () {
     function PingPongBall(radius) {
         this.radius = radius;
@@ -9,6 +12,7 @@ var PingPongBall = /** @class */ (function () {
     };
     return PingPongBall;
 }());
+exports.PingPongBall = PingPongBall;
 var CubedRoom = /** @class */ (function () {
     function CubedRoom(edge) {
         this.edge = edge;
@@ -19,6 +23,7 @@ var CubedRoom = /** @class */ (function () {
     };
     return CubedRoom;
 }());
+exports.CubedRoom = CubedRoom;
 var HowManyPingPongBallsFitInRectangularCube = /** @class */ (function () {
     function HowManyPingPongBallsFitInRectangularCube(ball, cube) {
         this.ball = ball;
@@ -29,6 +34,7 @@ var HowManyPingPongBallsFitInRectangularCube = /** @class */ (function () {
     };
     return HowManyPingPongBallsFitInRectangularCube;
 }());
+exports.HowManyPingPongBallsFitInRectangularCube = HowManyPingPongBallsFitInRectangularCube;
 var ppball = new PingPongBall(20);
 var room = new CubedRoom(9241.6);
 var result = new HowManyPingPongBallsFitInRectangularCube(ppball, room);

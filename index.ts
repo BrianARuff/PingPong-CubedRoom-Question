@@ -16,7 +16,10 @@ export class PingPongBall implements IPingPongBall {
   }
 }
 
-export class CubedRoom {
+interface ICubedRoom {
+  edge: number;
+}
+export class CubedRoom implements ICubedRoom {
   edge;
   constructor(edge) {
     this.edge = edge;
@@ -28,7 +31,13 @@ export class CubedRoom {
   }
 }
 
-export class HowManyPingPongBallsFitInRectangularCube {
+interface IHowManyPingPongBallsFitInRectangularCube {
+  ball: PingPongBall;
+  room: CubedRoom;
+}
+export class HowManyPingPongBallsFitInRectangularCube<
+  IHowManyPingPongBallsFitInRectangularCube
+> {
   ball;
   cube;
   constructor(ball, cube) {
